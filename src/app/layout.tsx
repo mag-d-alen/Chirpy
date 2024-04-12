@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Lato, Montserrat } from "next/font/google";
 import "./globals.css";
+import Layout from "@/components/layout/layout";
 
 const font = Montserrat({ subsets: ["latin"], weight: ["400", "600"] });
 
@@ -16,7 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={font.className}>{children}</body>
+      <body className={font.className}>
+        <Layout>{children}</Layout>
+      </body>
     </html>
   );
 }
