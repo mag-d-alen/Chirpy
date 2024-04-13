@@ -30,7 +30,7 @@ const getItems = () => {
   const items = [
     { name: "home", icon: HomeIcon, path: "/" },
     { name: "library", icon: PuzzlePieceIcon, path: "/library" },
-    { name: "login", icon: LoginIcon, path: "/auth/login" },
+    { name: "login", icon: LoginIcon, path: "/login" },
     { name: "page2", icon: HomeIcon, path: "/page2" },
   ];
   return items.map((item) => (

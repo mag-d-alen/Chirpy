@@ -11,3 +11,9 @@
     background-color: #faaf0063;
   }
 }
+
+path {
+  stroke: black;
+  stroke-width: 1.7;
+  fill: none;
+}

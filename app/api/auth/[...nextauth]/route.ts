@@ -1,7 +1,8 @@
-import NextAuth from "next-auth";
-import Auth0Provider from "next-auth/providers/auth0"
+import NextAuth, { getServerSession } from "next-auth";
+
 import GoogleProvider from "next-auth/providers/google";
 import { pages } from "next/dist/build/templates/app-page";
+import { NextResponse } from "next/server";
 
 export const authOptions = {
   // Configure one or more authentication providers
@@ -11,8 +12,7 @@ export const authOptions = {
       clientSecret: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_SECRET!,
     }),
   ],
-  pages: {
-    signIn: "/auth/login",
-  },
 };
-export default NextAuth(authOptions);
+
+const handler = NextAuth(authOptions);
+export { handler as GET, handler as POST };
