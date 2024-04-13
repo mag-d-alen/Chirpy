@@ -6,8 +6,8 @@ import Layout from "@/components/layout/layout";
 const font = Montserrat({ subsets: ["latin"], weight: ["400", "600"] });
 
 export const metadata: Metadata = {
-  title: "Chirper",
-  description: "Chirp. No more x.",
+  title: "Chirpy",
+  description: "Challenge-Improve-Practice",
 };
 
 export default function RootLayout({
