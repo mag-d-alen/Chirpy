@@ -8,7 +8,7 @@
     cursor: pointer;
     transform: scale(1.05);
     transition: transform 0.2s ease-in-out;
-    background-color: #faaf0063;
+    box-shadow: 0 0 10px #faaf00c2;
   }
 }
 

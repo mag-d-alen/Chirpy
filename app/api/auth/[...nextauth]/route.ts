@@ -1,8 +1,7 @@
-import NextAuth, { getServerSession } from "next-auth";
+import NextAuth from "next-auth";
 
 import GoogleProvider from "next-auth/providers/google";
-import { pages } from "next/dist/build/templates/app-page";
-import { NextResponse } from "next/server";
+
 
 export const authOptions = {
   // Configure one or more authentication providers

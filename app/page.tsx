@@ -1,10 +1,8 @@
-import Loader from "@/components/layout/loader";
-import Layout from "../components/layout/layout";
+import Loader from "./components/layout/loader";
+import Layout from "./components/layout/layout";
+import React from "react";
+import { Unauthorised } from "@/app/components/layout/unauthorised";
 
 export default function Home() {
-  return (
-    <Layout>
-      <Loader>chirp, chirp</Loader>
-    </Layout>
-  );
+  return <Unauthorised>chirp chirp</Unauthorised>;
 }

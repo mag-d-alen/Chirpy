@@ -1,3 +1,10 @@
 {
-  "cSpell.words": ["Firestore", "Signin"]
+  "cSpell.words": [
+    "Firestore",
+    "Flowbite",
+    "heroicons",
+    "NEXTAUTH",
+    "Signin",
+    "Unauthorised"
+  ]
 }

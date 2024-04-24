@@ -1,14 +1,20 @@
 import React from "react";
 import "../../app/globals.css";
-import Layout from "../../components/layout/layout";
-import Loader from "@/components/layout/loader";
+import Header from "@/app/components/layout/header";
+import Feed from "./feed/feed";
+import { Unauthorised } from "@/app/components/layout/unauthorised";
+import CreatePost from "./create/createPost";
+import PostList from "./feed/postList";
 
-const Something = () => {
+export default async function Page2() {
   return (
-    <Layout>
-      <Loader>Something</Loader>
-    </Layout>
+    <>
+      <Header>page2</Header>
+      <Unauthorised>
+        <CreatePost />
+        <PostList />
+        <Feed />
+      </Unauthorised>
+    </>
   );
-};
-
-export default Something;
+}
