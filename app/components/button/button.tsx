@@ -13,7 +13,7 @@ export const Button: React.FC<ButtonProps> = ({
     <button
       className={`${
         variant === "primary"
-          ? "bg-red-500  hover:bg-red-700  text-white"
+          ? "bg-red-600  hover:bg-red-400  text-white"
           : "bg-white hover:bg-gray-100  text-gray-800 border border-gray-300 "
       }
        rounded-3xl px-6 py-2 disabled:opacity-50 disabled:cursor-not-allowed`}

@@ -14,8 +14,10 @@ const config: Config = {
         montserrat: ["var(--font-montserrat)", "sans-serif"],
       },
       colors: {
-        light: "#faaf0082",
+        light: "#faaf00",
         veryLight: "#faaf0030",
+        slateDark: "#3f4245",
+        customYellow: "#f9fa00db",
       },
       //   backgroundImage: {
       //     "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

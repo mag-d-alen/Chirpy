@@ -20,7 +20,7 @@ const PostForm: React.FC = () => {
       <textarea
         name="text"
         rows={3}
-        placeholder="What's on your mind?"
+        placeholder="Your most recent thought..."
         className="w-full focus:outline-none p-4 border border-light rounded-md bottom-2 mb-4"
         required
       />

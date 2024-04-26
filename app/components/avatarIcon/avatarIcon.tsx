@@ -12,7 +12,7 @@ const AvatarIcon: React.FC<AvatarIconProps> = ({ src, alt }) => {
       alt={alt}
       width={40}
       height={40}
-      className="rounded-full h-11 w-11 border border-yellow-400 cursor-pointer hover:brightness-90"
+      className="rounded-full h-11 w-11 border border-customYellow cursor-pointer hover:brightness-90"
     />
   );
 };

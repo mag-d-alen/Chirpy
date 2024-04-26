@@ -23,7 +23,7 @@ const Post: React.FC<Partial<PostType>> = ({username, avatar, image, text, times
          <AvatarIcon src={avatar || ''} alt={'user avatar'} />
         <div className="flex flex-col gap-4 w-full">
           <div className="font-bold flex flex-wrap gap-4 ">
-            <span className="text-gray-500">{username}</span>
+            <span className="text-light">{username}</span>
             <h3>{text}</h3>
           </div>
           <div className="text-xs">{timestamp?.toString()}</div>
@@ -38,13 +38,6 @@ const Post: React.FC<Partial<PostType>> = ({username, avatar, image, text, times
             </div>
           )}
         </div>
-      </div>
-      <div className="flex items-center justify-between md:px-8">
-        <ShareIcon className="h-9 hoverEffect p-2" />
-        <HeartIcon className="h-9 hoverEffect p-2" />
-        <TrashIcon className="h-9 hoverEffect p-2" />
-        <ChatBubbleLeftIcon className="h-9 hoverEffect p-2" />
-        <ChartBarIcon className="h-9 hoverEffect p-2" />
       </div>
     </div>
   );

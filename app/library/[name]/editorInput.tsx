@@ -21,10 +21,9 @@ const EditorInput: React.FC<EditorInputProps> = ({
 }) => {
   return (
     <AceEditor
-      placeholder="Type your answer here..."
+      placeholder="Type here..."
       mode="javascript"
-      minLines={3}
-      height="200px"
+      height={`${darkTheme ? "200px" : "100px"}`}
       width="100%"
       value={value}
       theme={`${darkTheme ? "monokai" : "github"}`}

@@ -28,7 +28,7 @@ export default async function RootLayout({
   const session = await getServerSession(authOptions);
   return (
     <html lang="en" className={font.className}>
-      <body className="font-montserrat flex min-h-screen justify-between ">
+      <body className="font-montserrat flex min-h-screen justify-between bg-black text-white">
         <Sidebar />
         <Layout user={session?.user as User}>{children}</Layout>
       </body>

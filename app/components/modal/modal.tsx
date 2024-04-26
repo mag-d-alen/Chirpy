@@ -7,22 +7,20 @@ type ModalProps = {
   triggerText: string;
   triggerVariant: "primary" | "secondary";
   children: React.ReactNode;
-  onSave?: () => void;
-  onCancel?: () => void;
-  withFooter?: boolean;
+  onSave: () => void | Promise<void>;
+  onCancel: () => void;
 };
 
 const Modal: React.FC<ModalProps> = ({
   triggerText,
   triggerVariant,
-  onSave = () => {},
-  onCancel = () => {},
-  withFooter = true,
+  onSave,
+  onCancel,
   children,
 }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const handleSave = () => {
-    onSave && onSave();
+    onSave();
     setModalOpen(false);
   };
 
@@ -39,16 +37,14 @@ const Modal: React.FC<ModalProps> = ({
         show={modalOpen}
         onClose={() => setModalOpen(false)}
         className="w-full bg-slate-900 bg-opacity-30 h-full ">
-        <div className="w-full p-8 h-full rounded-md ">
+        <div className="w-full p-8 h-[90%] rounded-md bg-yellow-400  bg-opacity-50">
           {children}
-          {withFooter ? (
-            <FlowbiteModal.Footer className="flex gap-4 justify-end">
-              <Button onClick={handleSave}>Save</Button>
-              <Button variant="secondary" onClick={handleCancel}>
-                Cancel
-              </Button>
-            </FlowbiteModal.Footer>
-          ) : null}
+          <FlowbiteModal.Footer className="flex gap-4 justify-end">
+            <Button onClick={handleSave}>Save</Button>
+            <Button variant="secondary" onClick={handleCancel}>
+              Cancel
+            </Button>
+          </FlowbiteModal.Footer>
         </div>
       </FlowbiteModal>
     </>

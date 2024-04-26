@@ -176,16 +176,19 @@ export const addQuestion = async ({
   text,
   category,
   isCode,
+  links,
 }: {
   text: string;
   category: string;
   isCode: boolean;
+  links: string[];
 }) => {
-  console.log(text, category, isCode);
+  console.log(text, category, isCode, links);
 
   await addDoc(collection(db, "questions"), {
     text: text,
     category: category,
     isCode: isCode,
+    links: links,
   });
 };

@@ -27,6 +27,7 @@ const QuestionList: React.FC<QuestionListProps> = ({ category, userEmail }) => {
             status={question.answer ? true : false}
             answer={question.answer || ""}
             icCode={question.isCode}
+            links={question.links}
           />
         ))
       ) : (

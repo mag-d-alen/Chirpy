@@ -18,7 +18,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ category }) => {
         <h2 className="font-bold text-xl">{name}</h2>{" "}
         <Image src={icon} alt={name} width={30} height={30}></Image>
         <div className="text-sm flex ">{description}</div>
-        <div className="text-md text-slate-600 py-4">
+        <div className="text-md text-light py-4">
           Practice {name} questions now!
         </div>
       </div>

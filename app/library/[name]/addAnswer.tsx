@@ -2,9 +2,10 @@
 import { addAnswer } from "@/app/actions";
 import Modal from "@/app/components/modal/modal";
 import ModalBody from "@/app/components/modal/modalBody";
-import { ModalHeader } from "flowbite-react/components/Modal";
 import React from "react";
 import EditorInput from "./editorInput";
+import ModalHeader from "@/app/components/modal/modalHeader";
+import LinkButton from "@/app/components/linkButton/linkButton";
 
 type AddAnswerProps = {
   status: boolean;
@@ -13,6 +14,7 @@ type AddAnswerProps = {
   question: string;
   questionId: string;
   isCode?: boolean;
+  links?: string[];
 };
 export type AnswerData = {
   id: string;
@@ -30,9 +32,10 @@ const AddAnswer: React.FC<AddAnswerProps> = ({
   questionId,
   isCode,
   category,
+  links,
 }) => {
   const [newAnswer, setNewAnswer] = React.useState<string>(answer);
-
+console.log(links)
   const handleDownloadImage = async () => {
     const res = await addAnswer({
       answer: newAnswer,
@@ -76,6 +79,7 @@ const AddAnswer: React.FC<AddAnswerProps> = ({
             onChange={setNewAnswer}
             isCode={isCode}
           />
+          {links?.length ? links.map((link) =><LinkButton link={link} />) : null}
         </div>
       </ModalBody>
     </Modal>

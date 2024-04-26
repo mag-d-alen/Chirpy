@@ -20,9 +20,9 @@ export default async function Login() {
               : "Welcome to Chirpy"}
           </Header>
           <Image
-            src="/logo.png"
+            src="/logo.svg"
             alt="logo"
-            className="object-cover inline-flex w-12 h-10"
+            className="object-cover inline-flex w-12 h-10" 
             width={100}
             height={100}
           />

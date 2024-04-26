@@ -14,7 +14,7 @@ export default async function Sidebar() {
 
   const memoizedItems = getItems(!!session);
   return (
-    <nav className="flex flex-col items-start min-h-screen  bg-light w-auto  p-4 ">
+    <nav className="flex flex-col items-start min-h-screen p-4 pr-8 border-r border-light">
       <div className="flex items-center justify-center gap-4 text-red-600 mb-8 w-full">
         <Image
           src="/logo.svg"
@@ -26,7 +26,7 @@ export default async function Sidebar() {
         <p className="font-bold hidden md:flex"> Chirpy</p>
       </div>
       {memoizedItems && (
-        <div className="flex flex-col gap-4 ">{memoizedItems}</div>
+        <div className="flex flex-col gap-4 text-white ">{memoizedItems}</div>
       )}
     </nav>
   );
@@ -46,7 +46,6 @@ const getItems = (isLoggedIn: boolean) => {
     <SidebarMenuItem
       key={item.name}
       item={item.name}
-      Icon={item.icon}
       path={item.path}
     />
   ));

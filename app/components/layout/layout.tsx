@@ -13,7 +13,7 @@ type Props = {
 const Layout: React.FC<Props> = ({ children, user }) => {
   return (
       <main className="flex flex-col flex-1">
-        <sub className="text-gray-500 p-4">
+        <sub className="text-light p-4">
           Hello, {user ? user.name : "Guest"}
         </sub>
         <section className="flex min-h-screen flex-1 flex-col items-center p-8 ">

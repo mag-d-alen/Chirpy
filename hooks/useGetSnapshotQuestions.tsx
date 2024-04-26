@@ -19,6 +19,7 @@ export type Question = {
   text: string;
   category: string;
   isCode: boolean;
+  links: string[];
 };
 export type QuestionAndAnswer = Question & { answer: string };
 export const useGetSnapshotQuestions = ({
