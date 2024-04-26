@@ -1,9 +1,11 @@
 import "@/app/globals.css";
 import Header from "@/app/components/layout/header";
-import Feed from "../page2/feed/feed";
+
 import { Unauthorised } from "@/app/components/layout/unauthorised";
-import CreatePost from "../page2/create/createPost";
-import PostList from "../page2/feed/postList";
+import CreatePost from "./create/createPost";
+import Feed from "./feed/feed";
+import PostList from "./feed/postList";
+
 
 export default async function Notes() {
   return (

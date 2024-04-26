@@ -1,11 +1,5 @@
 import Image from "next/image";
 import SidebarMenuItem from "./sidebarMenuItem";
-import { HomeIcon } from "@heroicons/react/24/solid";
-import {
-  ArrowRightEndOnRectangleIcon as LoginIcon,
-  PuzzlePieceIcon,
-  ChatBubbleLeftIcon as ChatIcon,
-} from "@heroicons/react/24/outline";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 
@@ -23,7 +17,7 @@ export default async function Sidebar() {
           width={20}
           height={20}
         />
-        <p className="font-bold hidden md:flex"> Chirpy</p>
+        <p className="font-extrabold hidden md:flex font-lg"> Chirpy</p>
       </div>
       {memoizedItems && (
         <div className="flex flex-col gap-4 text-white ">{memoizedItems}</div>
@@ -33,19 +27,14 @@ export default async function Sidebar() {
 }
 const getItems = (isLoggedIn: boolean) => {
   const items = [
-    { name: "home", icon: HomeIcon, path: "/" },
+    { name: "home", path: "/" },
+    { name: "notes", path: "/notes" },
     {
       name: `${isLoggedIn ? "logout" : "login"}`,
-      icon: LoginIcon,
       path: "/login",
     },
-    { name: "notes", icon: ChatIcon, path: "/notes" },
   ];
   return items.map((item) => (
-    <SidebarMenuItem
-      key={item.name}
-      item={item.name}
-      path={item.path}
-    />
+    <SidebarMenuItem key={item.name} item={item.name} path={item.path} />
   ));
 };
