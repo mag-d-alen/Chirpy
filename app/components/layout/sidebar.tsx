@@ -34,13 +34,12 @@ export default async function Sidebar() {
 const getItems = (isLoggedIn: boolean) => {
   const items = [
     { name: "home", icon: HomeIcon, path: "/" },
-    { name: "library", icon: PuzzlePieceIcon, path: "/library" },
     {
       name: `${isLoggedIn ? "logout" : "login"}`,
       icon: LoginIcon,
       path: "/login",
     },
-    { name: "page2", icon: ChatIcon, path: "/page2" },
+    { name: "notes", icon: ChatIcon, path: "/notes" },
   ];
   return items.map((item) => (
     <SidebarMenuItem

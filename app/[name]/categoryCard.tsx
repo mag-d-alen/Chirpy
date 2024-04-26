@@ -13,7 +13,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ category }) => {
   const { icon, name, description } = category;
 
   return (
-    <Link className="w-full lg:w-[45%] " href={`/library/${name}`}>
+    <Link className="w-full lg:w-[45%] " href={`/${name}`}>
       <div className="flex flex-col items-center gap-4 w-full h-full border border-light rounded-md p-4 hoverEffect">
         <h2 className="font-bold text-xl">{name}</h2>{" "}
         <Image src={icon} alt={name} width={30} height={30}></Image>

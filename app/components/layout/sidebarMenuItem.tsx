@@ -3,7 +3,6 @@ import React from "react";
 import {
   HomeIcon,
   ArrowRightEndOnRectangleIcon as LoginIcon,
-  PuzzlePieceIcon,
   ChatBubbleLeftIcon as ChatIcon,
 } from "@heroicons/react/24/outline";
 
@@ -26,13 +25,9 @@ const getIcon = (item: string) => {
   switch (item) {
     case "home":
       return <HomeIcon className="w-6 h-6 stroke-white fill-white" />;
-    case "library":
-      return (
-        <PuzzlePieceIcon stroke="white" color="white" className="w-6 h-6" />
-      );
     case "login":
       return <LoginIcon color="white" className="w-6 h-6" />;
-    case "page2":
+    case "notes":
       return <ChatIcon color="white" className="w-6 h-6" />;
     default:
       return <HomeIcon color="white" className="w-6 h-6" />;

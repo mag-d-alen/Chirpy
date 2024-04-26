@@ -1,6 +1,6 @@
 import { getProviders } from "next-auth/react";
 import Image from "next/image";
-import "../../app/globals.css";
+import "@/app/globals.css";
 import ProviderButton from "../components/providerButton";
 import React from "react";
 import Header from "@/app/components/layout/header";

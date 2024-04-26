@@ -3,7 +3,7 @@ import React from "react";
 import {
   useGetSnapshotQuestions,
   QuestionAndAnswer,
-} from "../../../hooks/useGetSnapshotQuestions";
+} from "../../hooks/useGetSnapshotQuestions";
 import QuestionCard from "./questionCard";
 type QuestionListProps = {
   category: string;

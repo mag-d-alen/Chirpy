@@ -13,7 +13,7 @@ import {
   updateDoc,
 } from "firebase/firestore";
 import { getDownloadURL, ref, uploadString } from "firebase/storage";
-import { AnswerData } from "./library/[name]/addAnswer";
+import { AnswerData } from "./[name]/addAnswer";
 import { Question } from "../hooks/useGetSnapshotQuestions";
 
 export const getUserData = async () => {
