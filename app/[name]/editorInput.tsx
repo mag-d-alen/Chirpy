@@ -23,7 +23,7 @@ const EditorInput: React.FC<EditorInputProps> = ({
     <AceEditor
       placeholder="Type here..."
       mode="javascript"
-      height={`${darkTheme ? "200px" : "100px"}`}
+      height={`${darkTheme ? "300px" : "100px"}`}
       width="100%"
       value={value}
       theme={`${darkTheme ? "monokai" : "github"}`}

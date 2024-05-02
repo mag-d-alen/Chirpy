@@ -35,7 +35,7 @@ const AddAnswer: React.FC<AddAnswerProps> = ({
   links,
 }) => {
   const [newAnswer, setNewAnswer] = React.useState<string>(answer);
-console.log(links)
+  console.log(links);
   const handleDownloadImage = async () => {
     const res = await addAnswer({
       answer: newAnswer,
@@ -62,24 +62,16 @@ console.log(links)
             isCode={isCode}
             darkTheme={false}
           />
-          {answer && (
-            <>
-              Your answer:
-              <EditorInput
-                value={answer}
-                onChange={() => {}}
-                readOnly={true}
-                isCode={isCode}
-              />
-            </>
-          )}
-          Enter new answer:
+
+          {answer ? "Update your answer" : " New answer:"}
           <EditorInput
             value={newAnswer}
             onChange={setNewAnswer}
             isCode={isCode}
           />
-          {links?.length ? links.map((link) =><LinkButton link={link} />) : null}
+          {links?.length
+            ? links.map((link) => <LinkButton link={link} />)
+            : null}
         </div>
       </ModalBody>
     </Modal>
