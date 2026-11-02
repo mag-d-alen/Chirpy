@@ -14,7 +14,7 @@
     "flowbite-react": "^0.12.17",
     "framer-motion": "^11.0.28",
     "html2canvas": "^1.4.1",
-    "next": "^16.3.8",
+    "next": "^16.4.3",
     "next-auth": "^4.24.15",
     "react": "^18",
     "react-ace": "^11.0.1",
